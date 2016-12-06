@@ -20,11 +20,13 @@
 	],
 	"require": {
 		"php": "^7.0",
-		"illuminate/contracts": "~5.3",
+		"illuminate/contracts": "^5.3",
 		"illuminate/routing": "~5.3",
 		"illuminate/http": "~5.3",
 		"laravel/socialite": "~2.0",
-		"socialiteproviders/manager": "~2.0"
+		"socialiteproviders/manager": "~2.0",
+		"ipunkt/laravel-package-manager": "^0.2.0",
+		"illuminate/database": "^5.3"
 	},
 	"require-dev": {
 		"mockery/mockery": "~0.9",

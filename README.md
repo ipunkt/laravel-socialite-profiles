@@ -17,7 +17,7 @@ Just install the package on your authorization server
 
 and add the Service Provider in your `config/app.php`
 
-	\Ipunkt\Laravel\SocialiteProfiles\DonePMSocialiteProfilesServiceProvider::class,
+	\Ipunkt\Laravel\SocialiteProfiles\SocialiteProfilesServiceProvider::class,
 
 Then use `@include('socialite-profiles::logins')` in your login blade template to display all possible configured social logins.
 
