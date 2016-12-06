@@ -2,9 +2,9 @@
 
 namespace Ipunkt\Laravel\SocialiteProfiles\Auth;
 
-use DonePM\SocialiteProfiles\Exceptions\SocialiteException;
-use DonePM\SocialiteProfiles\Repositories\SocialProfilesRepository;
 use Illuminate\Contracts\Auth\Guard;
+use Ipunkt\Laravel\SocialiteProfiles\Exceptions\SocialiteException;
+use Ipunkt\Laravel\SocialiteProfiles\Repositories\SocialProfilesRepository;
 use Laravel\Socialite\Contracts\Factory as Socialite;
 
 class AuthenticateUserWithSocialite
@@ -69,7 +69,7 @@ class AuthenticateUserWithSocialite
      * authenticates a user by socialite provider
      *
      * @param bool $hasCode
-     * @param \DonePM\SocialiteProfiles\Auth\SocialAuthenticatedUserListener $listener
+     * @param \Ipunkt\Laravel\SocialiteProfiles\Auth\SocialAuthenticatedUserListener $listener
      *
      * @return mixed|\Symfony\Component\HttpFoundation\RedirectResponse
      */
@@ -101,16 +101,6 @@ class AuthenticateUserWithSocialite
     }
 
     /**
-     * returns the returned user
-     *
-     * @return \Laravel\Socialite\Contracts\User
-     */
-    private function getUser()
-    {
-        return $this->getSocialiteProvider()->user();
-    }
-
-    /**
      * returns the current socialite provider
      *
      * @return \Laravel\Socialite\Contracts\Provider
@@ -123,5 +113,15 @@ class AuthenticateUserWithSocialite
         }
 
         return $this->socialite->driver($this->provider);
+    }
+
+    /**
+     * returns the returned user
+     *
+     * @return \Laravel\Socialite\Contracts\User
+     */
+    private function getUser()
+    {
+        return $this->getSocialiteProvider()->user();
     }
 }
