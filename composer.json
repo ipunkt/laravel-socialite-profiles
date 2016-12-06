@@ -1,0 +1,44 @@
+{
+	"name": "ipunkt/laravel-socialite-profiles",
+	"description": "A Laravel Socialite extension for having multiple social network profiles being attached.",
+	"keywords": [
+		"laravel",
+		"socialite",
+		"profiles",
+		"github",
+		"xing",
+		"google",
+		"facebook",
+		"twitter"
+	],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Robert Kummer",
+			"email": "rok@ipunkt.biz"
+		}
+	],
+	"require": {
+		"php": "^7.0",
+		"illuminate/contracts": "~5.3",
+		"illuminate/routing": "~5.3",
+		"illuminate/http": "~5.3",
+		"laravel/socialite": "~2.0",
+		"socialiteproviders/manager": "~2.0"
+	},
+	"require-dev": {
+		"mockery/mockery": "~0.9",
+		"phpunit/phpunit": "~5.0"
+	},
+	"suggest": {
+		"socialiteproviders/xing": "Social login with Xing",
+		"socialiteproviders/dropbox": "Social login with Dropbox"
+	},
+	"autoload": {
+		"psr-4": {
+			"Ipunkt\\Laravel\\SocialiteProfiles\\": "src/"
+		}
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true
+}
